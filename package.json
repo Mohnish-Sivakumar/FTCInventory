@@ -20,8 +20,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build && echo > dist/.nojekyll",
+    "deploy": "gh-pages -d dist -f"
   },
   "browserslist": [
     ">0.2%",
