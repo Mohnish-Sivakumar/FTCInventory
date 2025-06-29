@@ -6,6 +6,14 @@
   --grey: #f5f5f5;
 }
 
+/* prevent horizontal scroll */
+html, body{
+  overflow-x: hidden;
+}
+
+
+
+
 html, body, input, select, textarea, button, label {
   font-family: 'Lexend', 'Proxima Nova', sans-serif;
 }
@@ -36,6 +44,8 @@ body {
 }
 
 .form{
+  max-width: 640px;
+  margin: 0 auto;
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
@@ -107,10 +117,22 @@ body {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .form-section {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 28px;
+  box-sizing: border-box;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
   /* container styles as above */
   background-color: var(--white);
   border-radius: 12px;
@@ -190,6 +212,38 @@ body {
   height: 10px;
   background: var(--black);
   border-radius: 50%;
+}
+
+/* ---------- Responsive (mobile) ---------- */
+@media (max-width:600px){
+  .form-card{
+    padding:24px 18px;
+    margin:20px 10px;
+  }
+  .form input[type="text"],
+  .form input[type="number"],
+  .form select,
+  .search-input{
+    height:44px;
+    font-size:15px;
+  }
+  .item-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .item-row .qty-input{
+    margin-left:0;
+    margin-top:6px;
+  }
+  .checklist{
+    max-height:60vh;
+  }
+  .hero{
+    font-size:20px;
+  }
+  .form input[type="submit"]{
+    padding:12px 0;
+  }
 }
 
 /* label tweak */
